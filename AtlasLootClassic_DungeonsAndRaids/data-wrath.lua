@@ -23,6 +23,7 @@ local NORMAL_DIFF = data:AddDifficulty("NORMAL", nil, nil, nil, true)
 local HEROIC_DIFF = data:AddDifficulty("HEROIC", nil, nil, nil, true)
 local ALPHA_DIFF = data:AddDifficulty(AL["Titan Rune Alpha"], "TRA", nil, nil, true)
 local BETA_DIFF = data:AddDifficulty(AL["Titan Rune Beta"], "TRB", nil, nil, true)
+local GAMMA_DIFF = data:AddDifficulty(AL["Titan Rune Gamma"], "TRG", nil, nil, true)
 
 local RAID10_DIFF = data:AddDifficulty("10RAID")
 local RAID10H_DIFF = data:AddDifficulty("10RAIDH")
@@ -32,7 +33,6 @@ local RAID25H_DIFF = data:AddDifficulty("25RAIDH")
 local VENDOR_DIFF = data:AddDifficulty(AL["Vendor"], "vendor", 0)
 local T10_1_DIFF = data:AddDifficulty(AL["10H / 25 / 25H"], "T10_1", 0)
 local T10_2_DIFF = data:AddDifficulty(AL["25 Raid Heroic"], "T10_2", 0)
-
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
 local SET_ITTYPE = data:AddItemTableType("Set", "Item")
@@ -71,7 +71,6 @@ local PURPLE = "|cff9900ff%s|r"
 
 -- format
 local BONUS_LOOT_SPLIT = "%s - %s"
-
 
 local KEYS = {	-- Keys
 	name = AL["Keys"],
@@ -610,6 +609,16 @@ data["AhnKahet"] = {
                 { 7, 39249 }, -- Shoulderplates of Bloodshed
                 { 8, 39263 }, -- Dissevered Leggings
                 { 10, "ac2038" },
+            },
+            [GAMMA_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 2, "INV_Box_01", nil, AL["Defiler's Scourgestone"], nil },
+                { 4, 45314 }, -- Igniter Rod
+                { 5, 45310 }, -- Gauntlets of the Iron Furnace
+                { 7, 39255 }, -- Staff of the Plague Beast
+                { 8, 39249 }, -- Shoulderplates of Bloodshed
+                { 9, 39263 }, -- Dissevered Leggings
+                { 11, "ac2038" },
             }
         },
         { -- AhnkahetTaldaram / 16
@@ -648,6 +657,14 @@ data["AhnKahet"] = {
                 { 6, 39251 }, -- Necrogenic Belt
                 { 7, 39247 }, -- Cuffs of Dark Shadows
                 { 8, 39260 }, -- Helm of the Corrupted Mind
+            },
+            [GAMMA_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 45321 }, -- Pauldrons of Tempered Will
+                { 4, 46019 }, -- Leggings of the Insatiable
+                { 6, 39251 }, -- Necrogenic Belt
+                { 7, 39247 }, -- Cuffs of Dark Shadows
+                { 8, 39260 }, -- Helm of the Corrupted Mind
             }
         },
         { -- AhnkahetAmanitarHEROIC / 17
@@ -676,6 +693,14 @@ data["AhnKahet"] = {
             },
             [BETA_DIFF] = {
                 { 1, 45624 }, -- Emblem of Conquest
+                { 3, 45317 }, -- Shawl of the Caretaker
+                { 4, 45309 }, -- Rifle of the Platinum Guard
+                { 6, 39251 }, -- Necrogenic Belt
+                { 7, 39247 }, -- Cuffs of Dark Shadows
+                { 8, 39260 }, -- Helm of the Corrupted Mind
+            },
+            [GAMMA_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
                 { 3, 45317 }, -- Shawl of the Caretaker
                 { 4, 45309 }, -- Rifle of the Platinum Guard
                 { 6, 39251 }, -- Necrogenic Belt
@@ -719,6 +744,16 @@ data["AhnKahet"] = {
             },
             [BETA_DIFF] = {
                 { 1, 45624 }, -- Emblem of Conquest
+                { 3, 45702 }, -- Emerald Signet Ring
+                { 4, 45701 }, -- Greaves of the Earthbinder
+                { 6, 39258 }, -- Legplates of Inescapable Death
+                { 7, 39246 }, -- Amulet of Autopsy
+                { 8, 39250 }, -- Ring of Holy Cleansing
+                { 10, 21524 }, -- Red Winter Hat
+                { 12, "ac2056" },
+            },
+            [GAMMA_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
                 { 3, 45702 }, -- Emerald Signet Ring
                 { 4, 45701 }, -- Greaves of the Earthbinder
                 { 6, 39258 }, -- Legplates of Inescapable Death
@@ -788,8 +823,46 @@ data["AhnKahet"] = {
                 { 7, 39417 }, -- Death's Bite
                 { 8, 43998 }, -- Chestguard of Flagrant Prowess
                 { 9, 40486 }, -- Necklace of the Glittering Chamber
-				{ 16, "INV_Box_01", nil, AL["Tier Token iLvl200"], nil, "Tier7TitanRuneTokens" },
-				{ 17, "INV_Box_01", nil, AL["Tier Token iLvl225"], nil, "Tier8TitanRuneTokens" },
+                { 16, "INV_Box_01", nil, AL["Tier Token iLvl200"], nil, "Tier7TitanRuneTokens" },
+                { 17, "INV_Box_01", nil, AL["Tier Token iLvl225"], nil, "Tier8TitanRuneTokens" },
+                { 19, 43102 }, -- Frozen Orb
+                { 21, 41790 }, -- Design: Precise Scarlet Ruby
+                { 23, "ac1862" },
+                { 101, 40616 }, -- Helm of the Lost Conqueror
+                { 102, 40617 }, -- Helm of the Lost Protector
+                { 103, 40618 }, -- Helm of the Lost Vanquisher
+                { 104, 40622 }, -- Spaulders of the Lost Conqueror
+                { 105, 40623 }, -- Spaulders of the Lost Protector
+                { 106, 40624 }, -- Spaulders of the Lost Vanquisher
+                { 107, 40619 }, -- Leggings of the Lost Conqueror
+                { 108, 40620 }, -- Leggings of the Lost Protector
+                { 109, 40621 }, -- Leggings of the Lost Vanquisher
+                { 116, 45647 }, -- Helm of the Wayward Conqueror
+                { 117, 45648 }, -- Helm of the Warward Protector
+                { 118, 45649 }, -- Helm of the Wayward Vanquisher
+                { 119, 45659 }, -- Spaulders of the Wayward Conqueror
+                { 120, 45660 }, -- Spaulders of the Wayward Protector
+                { 121, 45661 }, -- Spaulders of the Wayward Vanquisher
+                { 122, 45635 }, -- Chestguard of the Wayward Conqueror
+                { 123, 45636 }, -- Chestguard of the Wayward Protector
+                { 124, 45637 }, -- Chestguard of the Wayward Vanquisher
+                { 125, 45644 }, -- Gloves of the Wayward Conqueror
+                { 126, 45645 }, -- Gloves of the Wayward Protector
+                { 127, 45646 }, -- Gloves of the Wayward Vanquisher
+                { 128, 45650 }, -- Leggings of the Wayward Conqueror
+                { 129, 45651 }, -- Leggings of the Wayward Protector
+                { 130, 45652 }, -- Leggings of the Wayward Vanquisher
+            },
+            [GAMMA_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 45696 }, -- Mark of the Unyielding
+                { 4, 45704 }, -- Shawl of the Shattered Giant
+                { 5, 45699 }, -- Pendant of the Piercing Glare
+                { 7, 39417 }, -- Death's Bite
+                { 8, 43998 }, -- Chestguard of Flagrant Prowess
+                { 9, 40486 }, -- Necklace of the Glittering Chamber
+                { 16, "INV_Box_01", nil, AL["Tier Token iLvl200"], nil, "Tier7TitanRuneTokens" },
+                { 17, "INV_Box_01", nil, AL["Tier Token iLvl225"], nil, "Tier8TitanRuneTokens" },
                 { 19, 43102 }, -- Frozen Orb
                 { 21, 41790 }, -- Design: Precise Scarlet Ruby
                 { 23, "ac1862" },
@@ -995,8 +1068,8 @@ data["AzjolNerub"] = {
                 { 7, 39419 }, -- Nerubian Conquerer
                 { 8, 43994 }, -- Belabored Legplates
                 { 9, 39425 }, -- Cloak of the Dying
-				{ 16, "INV_Box_01", nil, AL["Tier Token iLvl200"], nil, "Tier7TitanRuneTokens" },
-				{ 17, "INV_Box_01", nil, AL["Tier Token iLvl225"], nil, "Tier8TitanRuneTokens" },
+                { 16, "INV_Box_01", nil, AL["Tier Token iLvl200"], nil, "Tier7TitanRuneTokens" },
+                { 17, "INV_Box_01", nil, AL["Tier Token iLvl225"], nil, "Tier8TitanRuneTokens" },
                 { 19, 43102 }, -- Frozen Orb
                 { 21, 41796 }, -- Design: Infused Twilight Opal
                 { 23, "ac1860" },
@@ -1234,8 +1307,9 @@ data["DrakTharonKeep"] = {
 				{ 9, 43996 }, -- Sabatons of Firmament
 				{ 16, "INV_Box_01", nil, AL["Tier Token iLvl200"], nil, "Tier7TitanRuneTokens" },
 				{ 17, "INV_Box_01", nil, AL["Tier Token iLvl225"], nil, "Tier8TitanRuneTokens" },
-				{ 19, 43102 }, -- Frozen Orb { 21, 41796 }, -- Design: Infused Twilight Opal
-				{ 23, "ac1860" }, { 101, 40616 }, -- Helm of the Lost Conqueror
+				{ 19, 43102 }, -- Frozen Orb
+				{ 23, "ac1860" },
+				{ 101, 40616 }, -- Helm of the Lost Conqueror
 				{ 102, 40617 }, -- Helm of the Lost Protector
 				{ 103, 40618 }, -- Helm of the Lost Vanquisher
 				{ 104, 40622 }, -- Spaulders of the Lost Conqueror

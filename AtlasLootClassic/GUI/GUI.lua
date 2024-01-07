@@ -32,10 +32,10 @@ local LOADER_STRING = "GUI_LOADING"
 local TT_INFO_ENTRY = "|cFFCFCFCF%s:|r %s"
 
 local RIGHT_SELECTION_ENTRYS = {
-	DIFF_MAX = 4,
+	DIFF_MAX = 5,
 	DIFF_MIN = 2,
 	DIFF_DEFAULT = 2,
-	BOSS_MAX = 24,
+	BOSS_MAX = 23,
 }
 
 local db
@@ -1267,7 +1267,7 @@ function GUI:Create()
 	frame.boss = GUI:CreateSelect()
 	frame.boss:SetParPoint("TOPLEFT", frame.difficulty.frame, "BOTTOMLEFT", 0, -10)
 	frame.boss:SetWidth(320)
-	frame.boss:SetNumEntrys(22)
+	frame.boss:SetNumEntrys(21)
 	frame.boss:SetButtonOnClick(BossSelectFunction)
 
 	frame.extra = GUI:CreateSelect()
